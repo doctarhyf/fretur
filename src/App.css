@@ -105,3 +105,45 @@
 img.net {
   width: 30px;
 }
+
+/* <div className="faq-item">
+          <div className="faq-title">
+            <span>Title</span>
+            <img src={arrowd} width={30} />
+          </div>
+          <div className="faq-cont">FAQ Content</div>
+        </div> */
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item > * {
+  padding: 0.5em;
+}
+
+.faq-item .faq-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+  border-bottom: #747474 solid 1px;
+  cursor: pointer;
+}
+
+.faq-item .faq-cont {
+  display: none;
+}
+
+.faq-item .faq-title img {
+  transform: rotate(-90deg);
+  transition: all ease-in-out 250ms;
+}
+
+.faq-item .faq-title:hover img {
+  transform: rotate(0deg);
+}
+
+.faq-item .faq-title:hover + div {
+  display: block;
+}
