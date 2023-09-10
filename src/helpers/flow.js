@@ -85,6 +85,10 @@ export const ROUTES = {
   PAGE_VISA: {
     path: "/visa",
   },
+
+  PAGE_TRACK_MOB: {
+    path: "/track_mob",
+  },
 };
 
 export const CARDS_DATA = [
@@ -128,8 +132,7 @@ export const CARDS_DATA = [
     title: "Tracking Mobilier",
     desc: "Avec fretur il est capable de tracker tous vos biens mobiliers (Voiture, moto etc. )",
     img: alfa,
-    path: ROUTES.PAGE_MY_ACC.path,
-    btnText: "Creer un compte FRETUR",
+    path: ROUTES.PAGE_TRACK_MOB.path,
   },
   {
     title: "Creer un compte",

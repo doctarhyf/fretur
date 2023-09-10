@@ -22,6 +22,7 @@ import PageMyAcc from "./pages/PageMyAcc";
 import PageVisa from "./pages/PageVisa";
 import PageNearOffice from "./pages/PageNearOffice";
 import PagePrivacy from "./pages/PagePrivacy";
+import PageTrackMob from "./pages/PageTrackMob";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -41,6 +42,8 @@ function App() {
             path={ROUTES.PAGE_COLIS_TRACK.path}
             element={<PageColisTrack />}
           />
+
+          <Route path={ROUTES.PAGE_TRACK_MOB.path} element={<PageTrackMob />} />
 
           <Route path={ROUTES.PAGE_ABOUT.path} element={<PageAbout />} />
           <Route path={ROUTES.PAGE_CONTACT.path} element={<PageContact />} />
