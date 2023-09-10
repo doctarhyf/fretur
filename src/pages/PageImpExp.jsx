@@ -36,7 +36,7 @@ const cards = [
   },
   */
   {
-    title: ROUTES.PAGE_COLIS_REC.path,
+    path: ROUTES.PAGE_COLIS_REC.path,
     icon: s4,
     title: "Collection collis",
     cont: "Pour la collection de tous vos collis",
