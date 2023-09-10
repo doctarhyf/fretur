@@ -5,8 +5,8 @@ import "../App.css";
 function FAQItem({ data }) {
   const { title, desc } = data;
   return (
-    <div className="faq-item">
-      <div className="faq-title">
+    <div className="faq-item flex">
+      <div className="faq-title flex justify-between bg-sky-500 text-white rounded-t-lg">
         <span>{title}</span>
 
         <img src={arrowd} width={30} />

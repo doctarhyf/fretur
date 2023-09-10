@@ -4,6 +4,8 @@ import dv from "../assets/cards/dv.jpg";
 import habi from "../assets/cards/habi.jpg";
 import impexp from "../assets/cards/impexp.jpg";
 import visa from "../assets/cards/visa.jpg";
+import alfa from "../assets/cards/alfa.jpg";
+import acc from "../assets/cards/acc.jpg";
 
 export const CLOTHES_TYPE = [
   {
@@ -98,34 +100,41 @@ export const CARDS_DATA = [
     img: dv,
     path: ROUTES.PAGE_DV.path,
   },
-  {
+  /* {
     title: "Student Visa",
     desc: "Gagnez votre visa d’etudes pour continuer vos etudes aux USA",
     img: visa,
     path: ROUTES.PAGE_VISA.path,
-  },
-  {
+  }, */
+  /*  {
     title: "Habillement",
     desc: "Pour vos habillements hommes et femmes",
     img: habi,
     path: ROUTES.PAGE_HABI.path,
-  },
-  {
+  }, */
+  /*  {
     title: "Collection collis",
     desc: "Collections de tous vos collis achetes sur amazon, alibaba etc.",
     img: collis,
     path: ROUTES.PAGE_COLIS_REC.path,
-  },
-  {
+  }, */
+  /* {
     title: "Gerer un container",
     desc: "Vous pouvez gerer votre container en ligne a distance",
     img: cont,
     path: ROUTES.PAGE_CONTAINER.path,
+  }, */
+  {
+    title: "Tracking Mobilier",
+    desc: "Avec fretur il est capable de tracker tous vos biens mobiliers (Voiture, moto etc. )",
+    img: alfa,
+    path: ROUTES.PAGE_MY_ACC.path,
+    btnText: "Creer un compte FRETUR",
   },
   {
     title: "Creer un compte",
     desc: "Creer un compte fretur pour facilement gerer vos operations",
-    img: dv,
+    img: acc,
     path: ROUTES.PAGE_MY_ACC.path,
     btnText: "Creer un compte FRETUR",
   },

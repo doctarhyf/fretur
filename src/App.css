@@ -123,16 +123,11 @@ img.net {
   padding: 0.5em;
 }
 
-.faq-item .faq-title {
-  display: flex;
-  justify-content: space-between;
-  background-color: #e2e2e2;
-  border-bottom: #747474 solid 1px;
-  cursor: pointer;
-}
-
-.faq-item .faq-cont {
+.faq-item .faq-title + div {
+  transform: scaleY(0);
   display: none;
+  transform-origin: 0%;
+  transition: all ease-in-out 2500ms;
 }
 
 .faq-item .faq-title img {
@@ -146,4 +141,5 @@ img.net {
 
 .faq-item .faq-title:hover + div {
   display: block;
+  transform: scaleY(1);
 }

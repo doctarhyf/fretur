@@ -146,37 +146,39 @@ export default function Header({}) {
           <span className="text-3xl text-sky-500 font-bold ">FRETUR</span>
         </NavLink>
       </div>
-      <div className=" p-4 text-white gap-4 flex  justify-start items-start">
-        <ul className="flex gap-4 text-xs " id="navbar">
-          <li>
-            <NavLink to={ROUTES.PAGE_IMP_EXP.path}>
-              Import / Export<span></span>
-            </NavLink>
-          </li>
+      {false && (
+        <div className=" p-4 text-white gap-4 flex  justify-start items-start">
+          <ul className="flex gap-4 text-xs " id="navbar">
+            <li>
+              <NavLink to={ROUTES.PAGE_IMP_EXP.path}>
+                Import / Export<span></span>
+              </NavLink>
+            </li>
 
-          <li className="">
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-              to={ROUTES.PAGE_COLIS_SEND.path}
-            >
-              Send Goods
-              <span></span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={ROUTES.PAGE_COLIS_REC.path}>
-              Receive Goods<span></span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={ROUTES.PAGE_COLIS_TRACK.path}>
-              Track Package<span></span>
-            </NavLink>{" "}
-          </li>
-        </ul>
-      </div>
+            <li className="">
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+                to={ROUTES.PAGE_COLIS_SEND.path}
+              >
+                Send Goods
+                <span></span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={ROUTES.PAGE_COLIS_REC.path}>
+                Receive Goods<span></span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={ROUTES.PAGE_COLIS_TRACK.path}>
+                Track Package<span></span>
+              </NavLink>{" "}
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
