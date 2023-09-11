@@ -36,7 +36,7 @@ const BottomSectionsData = [
 export default function Footer({}) {
   return (
     <>
-      <div className="bottom-cont bg-gray-700 p-4 flex flex-col gap-4 text-white">
+      <div className="bottom-cont bg-gray-700 p-4 flex md:flex-row md:justify-around flex-col gap-4 text-white">
         <BottomSection data={BottomSectionsData[0]} />
         <BottomSection data={BottomSectionsData[1]} />
         <BottomSection data={BottomSectionsData[2]} />

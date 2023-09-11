@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import fb from "../assets/logo/fb.png";
 import insta from "../assets/logo/insta.png";
 import tw from "../assets/logo/tw.png";
 import rhyf from "../assets/rhyf.jpg";
+import cd from "../assets/icons/flag_cd.jpeg";
+import us from "../assets/icons/flag_us.jpeg";
 import "../App.css";
 
 const SECTIONS_DATA = {
@@ -29,40 +31,56 @@ function MenuItem({ data }) {
   );
 }
 
-export default function PageMyAcc({}) {
-  return (
-    <div className="m-8 flex min-h-[60vh] max-w-[75vw] mx-auto ">
-      <section className=" py-8 rounded-l-3xl left bg-gradient-to-b from-[#191560] to-[#6D00FD] text-white  ">
-        <div className="text-center text-3xl">MY PROFILE</div>
+const COUNTRIES = {
+  US: { flag: us, code: "+1", country: "US" },
+  CD: { flag: cd, code: "+243", country: "CD" },
+};
 
-        <div className="flex gap-4 p-4">
-          <img
-            src={rhyf}
-            className="rounded-full border-4 border-white w-[60pt] h-[60pt] "
-          />
-          <div className="flex flex-col gap-2">
-            <p>Upload Avater image file</p>
-            <button
-              type="button"
-              className="border-2 hover:bg-white hover:text-black hover:border-black px-2 border-dashed w-min mx-auto border-gray"
-            >
-              BROWSE
-            </button>
-            <div className="flex gap-4 justify-around">
-              <img src={fb} className="net" />
-              <img src={insta} className="net" />
-              <img src={tw} className="net" />
-            </div>
-          </div>
+export default function PageMyAcc({}) {
+  const [selectedCountry, setSelectedCountry] = useState(COUNTRIES.US);
+
+  return (
+    <div className="md:max-w-[1100px] flex flex-col md:flex-row min-h-[420pt]  mx-auto md:p-4  ">
+      <section className=" w-full md:w-[50%] ">
+        <p>Creer un compte FRETUR</p>
+
+        <div>
+          <div>Nom Complet</div>
+          <input type="text" />
         </div>
 
-        <nav className=" flex flex-col ">
-          {Object.values(SECTIONS_DATA).map((it, i) => (
-            <MenuItem key={i} data={it} />
-          ))}
-        </nav>
+        <div>
+          <div>Email</div>
+          <input type="text" />
+        </div>
+
+        <div>
+          <div>Addresse Physique</div>
+          <input type="text" />
+        </div>
+
+        <div>
+          <div>Phone</div>
+          <select
+            value={selectedCountry.country}
+            onChange={(e) => setSelectedCountry(COUNTRIES[e.target.value])}
+          >
+            <option value="US">USA</option>
+            <option value="CD">DRCONGO</option>
+          </select>
+          <div className="flex">
+            <img width={30} src={selectedCountry.flag} />
+
+            <div>{selectedCountry.code}</div>
+            <input type="text" maxLength={9} />
+          </div>
+
+          <button>S'ENREGISTRER</button>
+        </div>
       </section>
-      <section className="right ">rigth</section>
+      <section className="bg-gradient-to-b from-green-500 to-blue-500 p-8 text-white md:w-[50%] w-full ">
+        Bienvenue chez fretur
+      </section>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import collis from "../assets/cards/collis.jpg";
 import cont from "../assets/cards/cont.jpg";
-import dv from "../assets/cards/dv.jpg";
+import student from "../assets/cards/student.jpg";
 import habi from "../assets/cards/habi.jpg";
 import impexp from "../assets/cards/impexp.jpg";
 import visa from "../assets/cards/visa.jpg";
@@ -101,7 +101,7 @@ export const CARDS_DATA = [
   {
     title: "DV Loterie avec financement voyage",
     desc: "Gangnez votre visant en jouant a la lotterie DV",
-    img: dv,
+    img: student,
     path: ROUTES.PAGE_DV.path,
   },
   /* {
