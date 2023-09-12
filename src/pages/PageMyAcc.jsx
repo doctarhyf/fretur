@@ -38,48 +38,111 @@ const COUNTRIES = {
 
 export default function PageMyAcc({}) {
   const [selectedCountry, setSelectedCountry] = useState(COUNTRIES.US);
+  const [data, setdata] = useState({});
+
+  const clSectionTitle = "text-neutral-600  my-4";
+  const clInput =
+    " mb-4 outline w-full outline-1 outline-neutral-400 hover:outline-sky-500 p-2 rounded-md";
+
+  const clBtnForm = ` rounded-md p-2 text-center w-full text-sky-500 hover:text-white hover:bg-sky-500`;
 
   return (
     <div className="md:max-w-[1100px] flex flex-col md:flex-row min-h-[420pt]  mx-auto md:p-4  ">
-      <section className=" w-full md:w-[50%] ">
-        <p>Creer un compte FRETUR</p>
+      <section className="bg-gradient-to-b from-green-500 to-blue-500 p-8 text-white md:w-[50%] w-full ">
+        <p className="text-3xl">Avantage du compte Fretur</p>
+
+        <ul className="mt-8">
+          {[
+            "Profitez des promotions",
+            "Tracker vos colis",
+            "Gagner des cadeux par vos recommendations",
+            "Et plus ...",
+          ].map((it, i) => (
+            <li className="list-bullet">{it}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className=" p-8 w-full md:w-[50%] ">
+        <p className="text-3xl font-bold my-4">Creer un compte</p>
+
+        <p className={clSectionTitle}>Info Perso</p>
 
         <div>
-          <div>Nom Complet</div>
-          <input type="text" />
+          <input className={clInput} placeholder="Nom Complet" />
         </div>
 
         <div>
-          <div>Email</div>
-          <input type="text" />
-        </div>
-
-        <div>
-          <div>Addresse Physique</div>
-          <input type="text" />
+          <input className={clInput} placeholder="Email" type="text" />
         </div>
 
         <div>
           <div>Phone</div>
           <select
+            className={clInput}
             value={selectedCountry.country}
             onChange={(e) => setSelectedCountry(COUNTRIES[e.target.value])}
           >
             <option value="US">USA</option>
             <option value="CD">DRCONGO</option>
           </select>
-          <div className="flex">
-            <img width={30} src={selectedCountry.flag} />
 
-            <div>{selectedCountry.code}</div>
-            <input type="text" maxLength={9} />
+          <div className="flex gap-4 justify-between  items-start ">
+            <div className="flex gap-2 mt-2">
+              <img
+                width={30}
+                height={30}
+                className="object-center"
+                src={selectedCountry.flag}
+              />
+
+              <div>{selectedCountry.code}</div>
+            </div>
+            <input
+              className={`${clInput} mt-0 `}
+              type="tel"
+              placeholder="893092849"
+              maxLength={9}
+            />
           </div>
-
-          <button>S'ENREGISTRER</button>
         </div>
-      </section>
-      <section className="bg-gradient-to-b from-green-500 to-blue-500 p-8 text-white md:w-[50%] w-full ">
-        Bienvenue chez fretur
+
+        <div>
+          <input className={clInput} placeholder="Password" type="password" />
+        </div>
+
+        <div>
+          <input
+            className={clInput}
+            placeholder="Re-Password"
+            type="password"
+          />
+        </div>
+
+        <p className={clSectionTitle}>Addresse Physique</p>
+
+        <div className="flex gap-2 items-start">
+          <p className="my-2">Ville:</p>
+          <select className={` ${clInput} w-full `}>
+            <option>KINSHASA</option>
+            <option>LUBUMBASHI</option>
+            <option>LIKASI</option>
+            <option>KOLWEZI</option>
+            <option>MBUJI-MAYI</option>
+          </select>
+        </div>
+        <div>
+          <input className={clInput} placeholder="Quartier" type="text" />
+        </div>
+        <div className="flex gap-2">
+          <input className={clInput} placeholder="Avenue" type="text" />
+
+          <input className={` ${clInput} `} placeholder="Numero" type="text" />
+        </div>
+
+        <div>
+          <button className={clBtnForm}>S'ENREGISTRER</button>
+        </div>
       </section>
     </div>
   );

@@ -4,7 +4,7 @@ import { ROUTES, CARDS_DATA, images } from "../helpers/flow";
 import { NavLink } from "react-router-dom";
 import MyImageGallery from "../comps/MyImageGallery";
 
-function HomePageCard({ data }) {
+function HomePageCard({ data, grow }) {
   let { title, desc, img, path, btnText } = data;
 
   btnText = btnText ? btnText : "Learn more";
@@ -12,14 +12,27 @@ function HomePageCard({ data }) {
   console.log("data => \n", data);
 
   return (
-    <div className="relative w-full  md:w-[30%]   card pt-4 bg-slate-100 shadow-md shadow-black/25 mt-4 rounded-md">
+    <div
+      className={`relative w-full ${
+        grow ? " grow" : ""
+      }  md:w-[30%]   card pt-4 bg-slate-100 shadow-md shadow-black/25 mt-4 rounded-md`}
+    >
       <div className="absolute bottom-0 p-2 m-2 text-xs hover:bg-sky-500 transition-all  text-white rounded-lg border border-sky-500">
         <NavLink to={path}>{btnText}</NavLink>
       </div>
       <div className="mx-4 text-lg text-sky-500">{title}</div>
       <div className="mx-4 text-slate-800 text-sm">{desc}</div>
-      <div className="mt-4  min-h-[140px] max-h-[180px] md:h-[340px]  overflow-hidden">
-        <img className=" h-[100%] object-cover w-[100%] " src={img} />
+      <div
+        className={`mt-4 min-h-[140px]  ${
+          grow ? " max-h-[300px] " : " max-h-[180px]"
+        } md:h-[340px]  overflow-hidden`}
+      >
+        <img
+          className={` h-[100%] ${
+            grow ? "object-top " : "object-center"
+          } object-cover w-[100%] `}
+          src={img}
+        />
       </div>
     </div>
   );
@@ -41,7 +54,11 @@ export default function PageHome(props) {
           id="cards-cont   "
         >
           {CARDS_DATA.map((card, i) => (
-            <HomePageCard key={i} data={card} />
+            <HomePageCard
+              key={i}
+              data={card}
+              grow={i === CARDS_DATA.length - 1 ? true : false}
+            />
           ))}
         </div>
       </main>
