@@ -48,7 +48,7 @@ export default function PageMyAcc({}) {
 
   return (
     <div className="md:max-w-[1100px] flex flex-col md:flex-row min-h-[420pt]  mx-auto md:p-4  ">
-      <section className="bg-gradient-to-b from-green-500 to-blue-500 p-8 text-white md:w-[50%] w-full ">
+      <section className="bg-gradient-to-b  text-right from-green-500 to-blue-500 p-8 text-white md:w-[50%] w-full ">
         <p className="text-3xl">Avantage du compte Fretur</p>
 
         <ul className="mt-8">
