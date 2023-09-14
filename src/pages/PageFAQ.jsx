@@ -24,13 +24,15 @@ export default function PageFAQ({}) {
       </div>
       <div className="faq-cont">
         {[...Array(7)].map((it, i) => (
-          <FAQItem
-            key={i}
-            data={{
-              title: `Question numero ${i}`,
-              desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, commodi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, commodi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, commodi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, commodi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, commodi.",
-            }}
-          />
+          <details>
+            <summary className="p-1 cursor-pointer">
+              Question numero {i}
+            </summary>
+            <div>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,
+              repellendus?
+            </div>
+          </details>
         ))}
       </div>
     </div>

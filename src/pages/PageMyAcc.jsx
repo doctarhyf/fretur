@@ -48,10 +48,14 @@ export default function PageMyAcc({}) {
 
   return (
     <div className="md:max-w-[1100px] flex flex-col md:flex-row min-h-[420pt]  mx-auto md:p-4  ">
-      <section className="bg-gradient-to-b  text-right from-green-500 to-blue-500 p-8 text-white md:w-[50%] w-full ">
-        <p className="text-3xl">Avantage du compte Fretur</p>
+      <section className=" relative bg-[url('./assets/bg_myacc.jpg')] bg-top md:bg-center bg-cover md:text-right from-green-500 to-blue-500 p-8  md:w-[50%] w-full ">
+        <p className="text-3xl font-bold z-20 relative text-purple-500 ">
+          Avantage du compte Fretur
+        </p>
 
-        <ul className="mt-8">
+        <div className=" bg-gradient-to-b  from-black/50 to-white/10 z-10 absolute left-0 w-full h-full top-0"></div>
+
+        <ul className="mt-8 z-10 text-white relative ">
           {[
             "Profitez des promotions",
             "Tracker vos colis",
