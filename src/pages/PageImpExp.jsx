@@ -63,7 +63,7 @@ export default function PageImpExp(props) {
 
   return (
     <>
-      <div className="h-[300px] md:h-[420px]  relative ">
+      <div className="h-[300px] md:h-[420px]  mx-auto  relative ">
         <div className="absolute m-8 ">
           <div className="text-sky-500 text-[50px] ">FRETUR</div>
           <div className="max-w-[50%]">
@@ -76,7 +76,7 @@ export default function PageImpExp(props) {
         <img src={bg} className="w-[100%] h-[100%] object-cover" />
       </div>
 
-      <div className="cards-cont md:flex min-h-[300px] text-center bg-sky-500 text-white pb-8">
+      <div className="cards-cont  md:flex min-h-[300px] text-center bg-sky-500 text-white pb-8">
         {cards.map((card, i) => (
           <Card key={i} data={card} />
         ))}

@@ -49,7 +49,7 @@ export default function PageMyAcc({}) {
   return (
     <div className="md:max-w-[1100px] flex flex-col md:flex-row min-h-[420pt]  mx-auto md:p-4  ">
       <section className=" relative bg-[url('./assets/bg_myacc.jpg')] bg-top md:bg-center bg-cover md:text-right from-green-500 to-blue-500 p-8  md:w-[50%] w-full ">
-        <p className="text-3xl font-bold z-20 relative text-purple-500 ">
+        <p className="text-3xl font-bold z-20 relative  p-1  text-purple-500 ">
           Avantage du compte Fretur
         </p>
 
