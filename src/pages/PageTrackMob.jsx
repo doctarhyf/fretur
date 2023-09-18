@@ -156,11 +156,11 @@ export default function PageTrackMob({}) {
     }
 
     console.log(isMenubutton, onMenuItemClick);
-  }
+  } //cool
 
   return (
     <div className="min-h-[320pt] relative text-white md:max-w-[1100px] md:mx-auto bg-[#21212D]">
-      <div className=" h-[200pt] md:h-[300pt] text-white overflow-hidden relative w-full bg-[#21212D]">
+      <div className=" h-[220pt] md:h-[300pt] text-white overflow-hidden relative w-full bg-[#21212D]">
         <img src={alfa} className="w-[100%] absolute object-fit " />
         <div className="bg-gradient-to-b from-transparent to-[#21212D] absolute w-[100%] h-[100%]"></div>
         <div className="absolute text-left  p-8 flex flex-col gap-8">
