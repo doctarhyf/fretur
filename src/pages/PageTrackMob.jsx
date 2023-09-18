@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import error404 from "../assets/icons/error404.png";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../helpers/flow";
@@ -16,8 +16,11 @@ import car from "../assets/icons/car.png";
 import asset from "../assets/icons/asset.png";
 import destination from "../assets/icons/destination.png";
 import GMap from "../comps/GMap";
+import alfa from "../assets/cards/alfa.jpg";
 
-const SECTIONS = [
+import "../App.css";
+
+const SECTIONS_DATA = [
   { title: "Map", path: "map", icon: map },
   { title: "Assets", path: "assets", icon: asset },
   { title: "Past trips", path: "ptrips", icon: destination },
@@ -34,7 +37,7 @@ function Section({ children, title }) {
   );
 }
 
-export default function PageTrackMob({}) {
+/* export default function PageTrackMob2({}) {
   const [selectedSectionData, setSelectedSectionData] = useState(SECTIONS[0]);
   const [selectedSubSection, setSelectedSubSection] = useState("");
 
@@ -123,6 +126,166 @@ export default function PageTrackMob({}) {
       {selectedSectionData && selectedSectionData.path === SECTIONS[4].path && (
         <Section title={selectedSectionData.title}></Section>
       )}
+    </div>
+  );
+} */
+
+export default function PageTrackMob({}) {
+  const [selectedSectionData, setSelectedSectionData] = useState();
+  const [selectedSubSection, setSelectedSubSection] = useState("");
+  const [showingMenu, setShowingMenu] = useState(false);
+  const refMenu = useRef();
+
+  function onSelectSection(sectionData) {
+    setSelectedSectionData(sectionData);
+    console.log(sectionData);
+  }
+
+  function onSetSubSection(ss) {
+    setSelectedSubSection(ss);
+  }
+
+  function onMenuItemClick(isMenubutton, sectionData) {
+    /*  setSelectedSectionData(sectionData);
+
+    refMenu.current.open = false;
+    setShowingMenu(false); */
+    if (isMenubutton) {
+      setShowingMenu(false);
+    } else {
+    }
+
+    console.log(isMenubutton, onMenuItemClick);
+  }
+
+  return (
+    <div className="min-h-[320pt] relative text-white md:max-w-[1100px] md:mx-auto bg-[#21212D]">
+      <div className=" h-[200pt] md:h-[300pt] text-white overflow-hidden relative w-full bg-[#21212D]">
+        <img src={alfa} className="w-[100%] absolute object-fit " />
+        <div className="bg-gradient-to-b from-transparent to-[#21212D] absolute w-[100%] h-[100%]"></div>
+        <div className="absolute text-left  p-8 flex flex-col gap-8">
+          <div className="text-3xl font-bold">Tracking Mobiliers</div>
+          <div className="max-w-[180pt] text-white/100">
+            Pour tous tracking de vos bien mobiliers comme (Vehicule, Taxi,
+            motos etc. )
+          </div>
+          <button className=" text-sky-500 border border-sky-500 w-fit p-2 rounded-md hover:bg-sky-500 hover:text-white ">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <div className="p-8 gap-4 flex flex-col w-full md:max-w-[480pt]">
+        <div className="text-sky-500">FORMULAIRE D"ENREGISTREMENT</div>
+        <input
+          className="p-2 border outline-none  border-neutral-200 text-neutral-700 hover:border-sky-500 rounded-md"
+          type="text"
+          placeholder="Full name"
+        />
+        <div>
+          <div>Type de mobilier:</div>
+          <select className="p-2 border outline-none  border-neutral-200 text-neutral-700 hover:border-sky-500 rounded-md">
+            {["Camion", "Vehicule", "Taxi", "Moto", "Autre"].map((it, i) => (
+              <option>{it}</option>
+            ))}
+          </select>
+        </div>
+        <input
+          className="p-2 border outline-none  border-neutral-200 text-neutral-700 hover:border-sky-500 rounded-md"
+          type="text"
+          placeholder="Plaque d'immatriculation"
+        />
+
+        <div className="text-sky-500">TYPE D'ABONNEMENT</div>
+
+        <div className="flex gap-8 flex-col md:flex-row">
+          {[
+            {
+              title: "Normal",
+              desc: "Package normal, juste localisation",
+              price: 199,
+              oldPrice: 299,
+              code: "normal",
+            },
+            {
+              title: "Full",
+              desc: "Package complet, localisation et assisstance en cas de perte",
+              price: 299,
+              oldPrice: 399,
+              code: "full",
+            },
+          ].map((p, i) => (
+            <div
+              className={` md:w-[50%] w-full  ${
+                i === 0 ? "bg-sky-500/20 border-sky-700" : ""
+              } border  cursor-pointer p-4 rounded-md
+              hover:bg-sky-500/30 hover:border-sky-800
+              
+              `}
+            >
+              <div>{p.title}</div>
+              <div className="text-3xl text-sky-500">${p.price}</div>
+              <div className="text-red-500 line-through">${p.oldPrice}</div>
+              <div className="text-neutral-400 italic text-sm">{p.desc}</div>
+            </div>
+          ))}
+        </div>
+
+        <button className=" text-sky-500 border border-sky-500 w-fit p-2 rounded-md hover:bg-sky-500 hover:text-white ">
+          S'ENREGISTRER
+        </button>
+      </div>
+
+      {/*  <div className="bg-[#2C2E3A] z-500  absolute  sm:w-[220pt] w-full p-4">
+        <details ref={refMenu}>
+          <summary>drrhyf@gmail.com</summary>
+          <div
+            className={`flex flex-col transition-all ease-in-out duration-200 `}
+          >
+            {SECTIONS_DATA.map((sectionData, i) => (
+              <button
+                className="text-left rounded-md border border-transparent
+              hover:border-sky-200
+              hover:bg-sky-400 flex gap-4 p-2"
+                onClick={(e) => {
+                  setSelectedSectionData(sectionData);
+                  refMenu.current.open = false;
+                }}
+              >
+                <img src={sectionData.icon} width={30} className="float-left" />
+                {sectionData.title}
+              </button>
+            ))}
+          </div>
+        </details>
+      </div>
+
+      <div className=" text-white  p-8 pt-[40pt]">
+        {selectedSectionData.path === SECTIONS_DATA[0].path && (
+          <Section title={selectedSectionData.title}>
+            <div className={`w-[100%] ${"hidden"} z-0 bg-red-50 h-[320pt] `}>
+              <GMap />
+            </div>
+            <img src={map} className="w-full h-full" />
+          </Section>
+        )}
+
+        {selectedSectionData.path === SECTIONS_DATA[1].path && (
+          <Section title={selectedSectionData.title}></Section>
+        )}
+
+        {selectedSectionData.path === SECTIONS_DATA[2].path && (
+          <Section title={selectedSectionData.title}>cool</Section>
+        )}
+
+        {selectedSectionData.path === SECTIONS_DATA[3].path && (
+          <Section title={selectedSectionData.title}>cool</Section>
+        )}
+
+        {selectedSectionData.path === SECTIONS_DATA[4].path && (
+          <Section title={selectedSectionData.title}>cool</Section>
+        )}
+      </div> */}
     </div>
   );
 }

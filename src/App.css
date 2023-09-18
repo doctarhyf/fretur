@@ -143,3 +143,11 @@ img.net {
   display: block;
   transform: scaleY(1);
 }
+
+details > summary {
+  list-style-type: "▶️";
+}
+
+details[open] > summary {
+  list-style-type: "🔽";
+}
