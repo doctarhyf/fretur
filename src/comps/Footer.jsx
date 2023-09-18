@@ -12,13 +12,16 @@ const BottomSectionsData = [
   {
     title: "Tools",
     links: [
+      { label: "Import/Export", link: ROUTES.PAGE_IMP_EXP.path },
       { label: "Find Near Office", link: ROUTES.PAGE_NEAR_OFFICE.path },
       { label: "Track Package", link: ROUTES.PAGE_COLIS_TRACK.path },
+      { label: "Tracking Mobilier", link: ROUTES.PAGE_TRACK_MOB.path },
     ],
   },
   {
     title: "Quick Links",
     links: [
+      { label: "My Account", link: ROUTES.PAGE_MY_ACC.path },
       { label: "FAQ", link: ROUTES.PAGE_FAQ.path },
       { label: "Contact Us", link: ROUTES.PAGE_CONTACT.path },
       /*  { label: "Fraud Awarness", link: "" }, */

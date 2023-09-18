@@ -166,8 +166,8 @@ export default function PageTrackMob({}) {
         <div className="absolute text-left  p-8 flex flex-col gap-8">
           <div className="text-3xl font-bold">Tracking Mobiliers</div>
           <div className="max-w-[180pt] text-white/100">
-            Pour tous tracking de vos bien mobiliers comme (Vehicule, Taxi,
-            motos etc. )
+            Avec FRETUR vous avez la possibliter de faire tous tracking de vos
+            bien mobiliers comme (Vehicule, Taxi, motos etc. )
           </div>
           <button className=" text-sky-500 border border-sky-500 w-fit p-2 rounded-md hover:bg-sky-500 hover:text-white ">
             Learn More
@@ -232,7 +232,7 @@ export default function PageTrackMob({}) {
         </div>
 
         <button className=" text-sky-500 border border-sky-500 w-fit p-2 rounded-md hover:bg-sky-500 hover:text-white ">
-          S'ENREGISTRER
+          S'ABONNER
         </button>
       </div>
 
