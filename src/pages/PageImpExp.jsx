@@ -18,35 +18,27 @@ const cards = [
     path: ROUTES.PAGE_COLIS_SEND.path,
     icon: s1,
     title: "Send Goods",
-    cont: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque consect nibh, sit amet egestas felis la.,",
+    cont: "une solution simple pour une expédition efficace. Planifiez en quelques clics les enlèvements et les livraisons, suivez vos colis en temps réel et simplifiez la logistique. Optez pour une chaîne d'approvisionnement plus efficace. Dites adieu aux soucis d'expédition et profitez de la facilité.",
   },
   {
     path: ROUTES.PAGE_COLIS_REC.path,
     icon: s2,
     title: "Receive Goods",
-    cont: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque consect nibh, sit amet egestas felis la.,",
+    cont: "Fretur vous facilite la réception de colis pour simplifier votre vie. Vous pouvez désormais faire envoyer vos colis à notre adresse spéciale, ce qui vous garantit une réception sécurisée. Dès qu'un colis arrive, nous vous prévenons instantanément, vous offrant la flexibilité de récupérer vos articles à votre convenance. Simplifiez la réception de colis grâce à notre service efficace et pratique.",
   },
-  /*
-
- {
-    title: "Collection collis",
-    desc: "Collections de tous vos collis achetes sur amazon, alibaba etc.",
-    img: collis,
-    path: ROUTES.PAGE_COLIS_REC.path,
-  },
-  */
+  
   {
     path: ROUTES.PAGE_COLIS_REC.path,
     icon: s4,
     title: "Collection collis",
-    cont: "Pour la collection de tous vos collis",
+    cont: "Nous sommes là pour vous aider à rassembler et à gérer vos colis. Notre service facilite la réception et l'organisation de vos envois, vous offrant une solution pratique pour gérer votre collection. Lorsque vos colis arrivent, nous veillons à ce que tout soit bien pris en charge, vous évitant ainsi le stress lié à la gestion des livraisons. Simplifiez votre expérience de collecte de colis grâce à notre assistance dédiée.",
   },
 
   {
     path: ROUTES.PAGE_MY_ACC.path,
     icon: s3,
     title: "Register My Account",
-    cont: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque consect nibh, sit amet egestas felis la.,",
+    cont: "N'hésitez pas à créer un compte sur notre plateforme ! En vous inscrivant, vous accéderez à une multitude d'avantages exclusifs. Profitez d'une expérience personnalisée, restez informé de nos dernières offres et simplifiez vos interactions avec notre service. Rejoignez notre communauté aujourd'hui pour vivre une expérience exceptionnelle.",
   },
 ];
 
