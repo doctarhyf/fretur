@@ -27,7 +27,7 @@ export const CLOTHES_TYPE = [
 
 export const ROUTES = {
   BASE_NAME: {
-    path: "/fretur/",
+    path: "/",
   },
   PAGE_NEAR_OFFICE: {
     path: "/nearoffice",
