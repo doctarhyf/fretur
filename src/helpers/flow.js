@@ -29,6 +29,9 @@ export const ROUTES = {
   BASE_NAME: {
     path: "/",
   },
+  PAGE_ADMIN: {
+    path: "/admin",
+  },
   PAGE_NEAR_OFFICE: {
     path: "/nearoffice",
   },

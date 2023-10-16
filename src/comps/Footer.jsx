@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import fretur from "../assets/logo/fretur.png";
 import fb from "../assets/logo/fb.png";
 import yt from "../assets/logo/yt.png";
@@ -6,7 +6,7 @@ import tw from "../assets/logo/tw.png";
 import insta from "../assets/logo/insta.png";
 import { ROUTES } from "../helpers/flow";
 import BottomSection from "../comps/BottomSection";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const BottomSectionsData = [
   {
@@ -37,6 +37,22 @@ const BottomSectionsData = [
 ];
 
 export default function Footer({}) {
+  const [count, setcount] = useState(0);
+  const navigate = useNavigate();
+
+  function onFreturClick(e) {
+    let c = count;
+    if (c === 5) {
+      c = 0;
+      navigate(ROUTES.PAGE_ADMIN.path);
+    }
+    c++;
+
+    setcount(c);
+
+    console.log(c);
+  }
+
   return (
     <>
       <div className="bottom-cont bg-gray-700 p-4 flex md:flex-row md:justify-around flex-col gap-4 text-white">
@@ -83,7 +99,7 @@ export default function Footer({}) {
 
         <div className="flex mt-4 justify-center gap-4 text-3xl text-center">
           <img src={fretur} width={40} />
-          <span>FRETUR</span>
+          <span onClick={onFreturClick}>FRETUR</span>
         </div>
       </footer>
     </>

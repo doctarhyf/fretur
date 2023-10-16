@@ -23,6 +23,7 @@ import PageVisa from "./pages/PageVisa";
 import PageNearOffice from "./pages/PageNearOffice";
 import PagePrivacy from "./pages/PagePrivacy";
 import PageTrackMob from "./pages/PageTrackMob";
+import PageAdmin from "./pages/PageAdmin";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -38,6 +39,7 @@ function App() {
             element={<PageColisSend />}
           />
           <Route path={ROUTES.PAGE_COLIS_REC.path} element={<PageColisRec />} />
+          <Route path={ROUTES.PAGE_ADMIN.path} element={<PageAdmin />} />
           <Route
             path={ROUTES.PAGE_COLIS_TRACK.path}
             element={<PageColisTrack />}
