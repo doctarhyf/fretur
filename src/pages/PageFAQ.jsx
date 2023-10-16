@@ -18,13 +18,13 @@ function FAQItem({ data }) {
 
 export default function PageFAQ({}) {
   return (
-    <div className=" m-8 ">
+    <div className=" m-8  md:max-w-[1100px] mx-auto ">
       <div className=" text-center text-xl text-sky-500 p-4">
         Foire aux questions
       </div>
       <div className="faq-cont">
         {[...Array(7)].map((it, i) => (
-          <details>
+          <details className="pb-2">
             <summary className="p-1 cursor-pointer">
               Question numero {i}
             </summary>

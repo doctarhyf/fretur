@@ -5,6 +5,8 @@ export default {
     extend: {
       backgroundImage: {
         bg_myacc: "url('/assets/bg_myacc.jpg')",
+        ny: "url('/assets/bg/ny.webp')",
+        visasus: "url('/assets/bg/visasus.png')",
       },
     },
   },
