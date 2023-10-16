@@ -68,7 +68,7 @@ export default function PageDV({}) {
       <div className=" h-[240pt] text-4xl text-white font-serif text-center p-8 bg-[url('./assets/bg/ny.jpg')] bg-top object-center ">
         Felicitations aux gangants de la Lotterie 2023
       </div>
-      <div className="dv-cont justify-center md:flex flex-wrap ">
+      <div className="dv-cont mt-8 border-t pt-4 justify-center md:flex flex-wrap ">
         {users.map((u, i) => (
           <div className="flex space-x-4 mb-4 border p-2 border-transparent hover:border-blue-400 rounded-md cursor-pointer ">
             <div>
