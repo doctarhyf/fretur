@@ -86,7 +86,7 @@ export default function MyImageGallery({ images }) {
               background: `url('${item.image}') no-repeat center center`,
             }}
           >
-            <div className=" bg-black/40 space-y-1 md:mx-auto shadow-md  w-fit mt-[120pt]  text-white p-2">
+            <div className=" bg-black/40 space-y-1 md:mx-auto shadow-md  w-fit mt-[120pt]  text-white p-2 md:p-4 rounded-md">
               <h1 className="text-3xl  shadow-black text-clip">{item.title}</h1>
               <p>{item.description}</p>
               <button className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-md">
