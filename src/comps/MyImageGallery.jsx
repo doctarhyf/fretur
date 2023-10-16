@@ -77,15 +77,16 @@ export default function MyImageGallery({ images }) {
           ))}
         </Swiper> */}
 
-      <Slider autoplay={3000}>
+      <Slider autoplay={2600}>
         {content.map((item, index) => (
           <div
             key={index}
             style={{
+              backgroundSize: "90%",
               background: `url('${item.image}') no-repeat center center`,
             }}
           >
-            <div className="space-y-1 md:mx-auto shadow-md  w-fit mt-[120pt]  text-white p-2">
+            <div className=" bg-black/40 space-y-1 md:mx-auto shadow-md  w-fit mt-[120pt]  text-white p-2">
               <h1 className="text-3xl  shadow-black text-clip">{item.title}</h1>
               <p>{item.description}</p>
               <button className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-md">
