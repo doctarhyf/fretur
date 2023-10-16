@@ -48,7 +48,9 @@ function DiapoItem({ item: it }) {
           <div className="h-[24pt]  overflow-hidden relative ">
             <img
               src={loading}
-              className={`absolute -top-20 ${ld ? "visible" : "hidden"} `}
+              className={`absolute -top-20  bg-transparent  ${
+                ld ? "visible" : "hidden"
+              } `}
             />
           </div>
 
