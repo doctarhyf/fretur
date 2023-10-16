@@ -88,6 +88,15 @@ export default function PageDV({}) {
           </div>
         ))}
       </div>
+
+      <div className="flex space-y-4 justify-center flex-col p-8">
+        <p className="mx-auto">
+          Pour avoir plus de renseignement sur la DV Lotterie avec FRETUR
+        </p>
+        <button className="bg-blue-500 text-white px-2 p-1 rounded-md mx-auto">
+          Learn More
+        </button>
+      </div>
     </div>
   );
 }
