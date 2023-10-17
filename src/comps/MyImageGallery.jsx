@@ -6,26 +6,20 @@ import "../App.css";
 
 const imgz = [
   {
-    original:
-      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/segment_review/hero_image/2023-Alfa-Romeo-Stelvio-Quadrifoglio-SUV-Blue-1001x565-%281%29.jpg",
-    thumbnail:
-      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/segment_review/hero_image/2023-Alfa-Romeo-Stelvio-Quadrifoglio-SUV-Blue-1001x565-%281%29.jpg",
+    original: "https://fretur.us/diapo/alfa.jpg",
+    thumbnail: "https://fretur.us/diapo/alfa.jpg",
   },
   {
-    original:
-      "https://1721181113.rsc.cdn77.org/data/images/full/26315/space-satellite-orbiting-the-earth-3d-rendering.jpg",
-    thumbnail:
-      "https://1721181113.rsc.cdn77.org/data/images/full/26315/space-satellite-orbiting-the-earth-3d-rendering.jpg",
+    original: "https://fretur.us/diapo/ps.jpg",
+    thumbnail: "https://fretur.us/diapo/ps.jpg",
   },
   {
-    original: "https://i.ytimg.com/vi_webp/_NX8F9FBvg0/maxresdefault.webp",
-    thumbnail: "https://i.ytimg.com/vi_webp/_NX8F9FBvg0/maxresdefault.webp",
+    original: "https://fretur.us/diapo/sat.jpg",
+    thumbnail: "https://fretur.us/diapo/sat.jpg",
   },
   {
-    original:
-      "https://morethanshipping.com/wp-content/uploads/2020/10/shipping-container-types.jpg",
-    thumbnail:
-      "https://morethanshipping.com/wp-content/uploads/2020/10/shipping-container-types.jpg",
+    original: "https://fretur.us/diapo/ship.jpg",
+    thumbnail: "https://fretur.us/diapo/ship.jpg",
   },
 ];
 
