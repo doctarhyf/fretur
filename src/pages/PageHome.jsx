@@ -17,7 +17,7 @@ function HomePageCard({ data, grow }) {
         grow ? " grow" : ""
       }  md:w-[30%]   card pt-4 bg-slate-100 shadow-md shadow-black/25 mt-4 rounded-md`}
     >
-      <div className="absolute bottom-0 p-2 m-2 text-xs hover:bg-sky-500 transition-all  text-white rounded-lg border border-sky-500">
+      <div className="absolute bottom-0 p-2 m-2 text-xs hover:bg-sky-500 transition-all  text-sky-500 hover:text-white rounded-lg border  border-sky-500">
         <NavLink to={path}>{btnText}</NavLink>
       </div>
       <div className="mx-4 text-lg text-sky-500">{title}</div>
