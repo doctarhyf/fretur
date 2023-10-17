@@ -12,7 +12,7 @@ export default function Card({ data }) {
       <div className="text-sm lg:min-h-[225pt]   ">{cont}</div>
       <button
         onClick={(e) => navigate(path)}
-        className="px-2 text-sm rounded-full text-cyan-500 bg-white shadow-md"
+        className="p-2 px-4 hover:border-white hover:bg-sky-700 hover:text-white border border-transparent text-sm rounded-full text-cyan-500 bg-white shadow-md"
       >
         Learn More
       </button>
