@@ -1,16 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import Slider from "react-animated-slider";
-import "react-animated-slider/build/horizontal.css";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/bundle";
 
 import "../App.css";
-
-import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 
 export default function MyImageGallery({ images }) {
   const [content, setcontent] = useState([
@@ -52,32 +42,8 @@ export default function MyImageGallery({ images }) {
 
   return (
     <>
-      {/* <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation, EffectCoverflow]}
-          className="mySwiper"
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-        >
-          {images.map((img, i) => (
-            <SwiperSlide>
-              <img src={img.original} />
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
-
-      <Slider autoplay={2600}>
+      swipper
+      {/*  <Slider autoplay={2600}>
         {content.map((item, index) => (
           <div
             key={index}
@@ -95,7 +61,7 @@ export default function MyImageGallery({ images }) {
             </div>
           </div>
         ))}
-      </Slider>
+      </Slider> */}
     </>
   );
 }
