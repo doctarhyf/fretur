@@ -62,7 +62,7 @@ export default function Footer({}) {
       </div>
       <footer className="bg-gray-900 text-sky-500 text-sm p-4 min-h-[100pt]">
         <div className="border-b py-2 border-b-gray-800">
-          <ul className="flex gap-4 flex-wrap justify-around">
+          <ul className="flex gap-4 text-center  flex-wrap justify-around">
             <NavLink to={"/"}>
               <li>Home</li>
             </NavLink>

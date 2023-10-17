@@ -6,7 +6,7 @@ export default function BottomSection({ data }) {
 
   return (
     <div>
-      <div className="text-sm">{title}</div>
+      <div className=" text-slate-400 ">{title}</div>
       {links.map((lk, i) => (
         <div>
           <NavLink

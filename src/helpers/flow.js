@@ -151,6 +151,7 @@ export const images = [
     original:
       "https://cdn.cloudflare.steamstatic.com/steam/apps/33220/capsule_616x353.jpg?t=1680014001",
     thumbnail: "https://picsum.photos/id/1018/250/150/",
+    description: "This is the desc",
   },
   {
     original: "https://cdn.mos.cms.futurecdn.net/2VF6gG8bQU9bGtvczYRmiF.jpg",
